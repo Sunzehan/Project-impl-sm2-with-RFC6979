@@ -53,6 +53,8 @@
 
 对于SM2-class，则是调用了ECC—class作为底层运算部件，根据RFC6979协议标准实现。该方案进行了基础性的ECDH正确性测试，SM2密钥协商测试，SM2数字签名与验证测试，测试过程均在key-Enc-test文件中可运行。
 
+最后main_part运行结果，可复现RFC6979，SM2文档中的示例结果（达到要求）
+
 备注：若要完整运行测试代码还需安装gmssl（pip install gmssl）和pysmx（pip install snowland-smx）。
 
 参考文献：
