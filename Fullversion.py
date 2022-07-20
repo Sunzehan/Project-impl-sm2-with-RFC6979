@@ -496,6 +496,7 @@ KEY_LEN = 128  # 默认密钥位数
 
 
 # SM2类继承ECC
+# 继承该逻辑，修改简化其参数调用
 class SM2(ECC):
     # 默认使用SM2推荐曲线参数
     def __init__(self, p=SM2_p, a=SM2_a, b=SM2_b, n=SM2_n, G=(SM2_Gx, SM2_Gy), h=None,
