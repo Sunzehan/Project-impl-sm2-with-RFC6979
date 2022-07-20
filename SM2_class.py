@@ -1,4 +1,5 @@
 # SM2类继承ECC，我们使用了通用ECC模型的思路
+# 改变一下相关参数与实现逻辑的简化！
 class SM2(ECC):
     # 默认使用SM2推荐曲线参数（安全参数中标明国家密码管理局：SM2椭圆曲线公钥密码算法推荐曲线参数）
     def __init__(self, p=SM2_p, a=SM2_a, b=SM2_b, n=SM2_n, G=(SM2_Gx, SM2_Gy), h=None,
