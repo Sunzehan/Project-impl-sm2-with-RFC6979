@@ -30,11 +30,12 @@ def test_ECDH(verify=False):
 
 
 # SM2密钥协商测试
+# 模拟真实的网络环境环境，可以使用PC搭建一个模拟服务器
 def test_SM2_agreement(option=False):
     time_1 = get_cpu_time()
     # A、B双方初始化
-    sm2_A = SM2(ID='Alice')
-    sm2_B = SM2(ID='Bob')
+    sm2_A = SM2(ID='sunzehan')
+    sm2_B = SM2(ID='Jimmy')
     # A、B均掌握对方的公钥和ID
     PA, IDA = sm2_A.pk, sm2_A.ID
     PB, IDB = sm2_B.pk, sm2_B.ID
@@ -216,4 +217,5 @@ def test_encryption():
     time_2 = get_cpu_time()
     print('SM2加解密完成，耗时%.2f ms' % ((time_2 - time_1) * 1000))
     print('结果：%s，解密得：%s(%s)' % (res, M2.hex(), M2.decode()))
+    
     # 加解密成功，解密后的16进制值(656e6372797074696f6e207374616e64617264)与SM2第4部分 A.2中的结果一致
