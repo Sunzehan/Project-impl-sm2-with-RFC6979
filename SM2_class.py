@@ -3,7 +3,8 @@
 class SM2(ECC):
     # 默认使用SM2推荐曲线参数（安全参数中标明国家密码管理局：SM2椭圆曲线公钥密码算法推荐曲线参数）
     def __init__(self, p=SM2_p, a=SM2_a, b=SM2_b, n=SM2_n, G=(SM2_Gx, SM2_Gy), h=None,
-                 ID=None, sk=None, pk=None, genkeypair=True):  # genkeypair表示是否自动生成公私钥对
+                 ID=None, sk=None, pk=None, genkeypair=True):  
+        # genkeypair为布尔型变量表示是否自动生成公私钥对
         if not h:  # 余因子h默认为1
             h = 1
         ECC.__init__(self, p, a, b, n, G, h)
@@ -214,7 +215,7 @@ class SM2(ECC):
         KA = KDF(join_bytes([xU, yU, ZA, ZB]), klen)
         if not option or not SB:
             return True, KA
-        # A9-A10（可选部分）
+        # A9-A10（可选）
         tmp = join_bytes([yU, sm3(join_bytes([xU, ZA, ZB, x1, y1, x2, y2]))])
         S1 = sm3(join_bytes([2, tmp]))
         if S1 != SB:
@@ -222,7 +223,7 @@ class SM2(ECC):
         SA = sm3(join_bytes([3, tmp]))
         return True, (KA, SA)
 
-    # B 协商确认（可选部分）
+    # B 协商确认（可选）
     # SM2第3部分 6.1 B10
     def agreement_confirm2(self, S2, SA):
         if S2 != SA:
