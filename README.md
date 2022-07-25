@@ -1,5 +1,5 @@
 # Project-impl-sm2-with-RFC6979
-该仓库中的代码完成了如下project
+该仓库中的代码完成了如下project，每个project的运行结果会在最后进行展示
 按协议RFC6979实现SM2。
 应用该sm2 class，可以在真实网络通信环境下实现sm2 的2部分签名过程！
 在真实网络通信环境下实现sm2的2部分解密过程！
@@ -162,7 +162,7 @@ ZA=H (ENTLA ‖IDA ‖a‖b‖ xG ‖ yG ‖ xA ‖ yA)， H是SM3算法
 【8】
 
 
-**六.代码文件说明：**
+**六.代码文件运行指导：**
 
 complete submission是所有工作量的集合版，由于是分功能实现SM2相关的部件，所以进行的了分块的提交。
  
