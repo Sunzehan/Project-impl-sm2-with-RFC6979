@@ -176,7 +176,7 @@ complete submission是所有工作量的集合版，由于是分功能实现SM2�
 
 七.运行结果截图
 -
-![图片](https://user-images.githubusercontent.com/107350922/181734363-3e854adb-eecc-41ac-8192-b08fa6babc14.png)
+![图片](https://user-images.githubusercontent.com/107350922/181735028-e5235a9f-ef62-4ca9-ade3-d2b0102524aa.png)
 
 ![图片](https://user-images.githubusercontent.com/107350922/181734449-057e7d87-99d0-41d6-8b5d-fd4367f9969a.png)
 
